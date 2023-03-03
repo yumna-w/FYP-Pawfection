@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F6979"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/signUpImageViewPaw"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/paw"
+        android:transitionName="mainLogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="CREATE ACCOUNT"
+        android:textColor="#CCE8DA"
+        android:textSize="35sp"
+        android:transitionName="loginText" />
+
+    <TextView
+        android:id="@+id/loginTextViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_medium"
+        android:text="Sign up to get started."
+        android:textColor="#CCE8DA"
+        android:textSize="15sp"
+        android:transitionName="loginText2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Name"
+            android:textColor="#CCE8DA"
+            android:textSize="15sp"
+            android:transitionName="loginText3" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpTextInputLayoutName"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="loginField"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="John Doe"
+                android:inputType="textCapWords"
+                android:textColor="#CCE8DA"
+                android:textColorHint="#CCE8DA"
+                android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/signUpTextViewEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Email address"
+            android:textColor="#CCE8DA"
+            android:textSize="15sp"
+            android:transitionName="loginText4" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpTextInputLayoutEmailAddress"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="loginField2"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="example@domain.com"
+                android:inputType="textEmailAddress"
+                android:textColor="#CCE8DA"
+                android:textColorHint="#CCE8DA"
+                android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Password"
+            android:textColor="#CCE8DA"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpTextInputLayoutPassword"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="********"
+                android:inputType="textPassword"
+                android:textColor="#CCE8DA"
+                android:textColorHint="#CCE8DA"
+                android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Re-enter password"
+            android:textColor="#CCE8DA"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpTextInputLayoutPassword2"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="********"
+                android:inputType="textPassword"
+                android:textColor="#CCE8DA"
+                android:textColorHint="#CCE8DA"
+                android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="CNIC"
+            android:textColor="#CCE8DA"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpTextInputLayoutCNIC"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="13 digit number"
+                android:inputType="number"
+                android:textColor="#CCE8DA"
+                android:textColorHint="#CCE8DA"
+                android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/kufam_semibold"
+                android:paddingTop="10dp"
+                android:text="You are a:"
+                android:textColor="#CCE8DA"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signUpRadioGroup"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/signUpRadioButtonPetLover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:buttonTint="#CCE8DA"
+                    android:fontFamily="@font/kufam_semibold"
+                    android:includeFontPadding="true"
+                    android:paddingTop="8dp"
+                    android:text="Pet lover"
+                    android:textAlignment="textEnd"
+                    android:textColor="#CCE8DA"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/signUpRadioButtonVet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:buttonTint="#CCE8DA"
+                    android:fontFamily="@font/kufam_semibold"
+                    android:paddingTop="8dp"
+                    android:text="Vet"
+                    android:textColor="#CCE8DA"
+                    android:textSize="15sp" />
+
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signUpButtonSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:text="Sign Up"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+    </LinearLayout>
+
+</LinearLayout>

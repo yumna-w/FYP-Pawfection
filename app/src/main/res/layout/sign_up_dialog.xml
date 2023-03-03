@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#CCE8DA"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/signUpDialogTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCE8DA"
+        android:fontFamily="@font/kufam_medium"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:text="By proceeding, you confirm that you are at least 18 years of age."
+        android:textAlignment="center"
+        android:textColor="#2F6979"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/signUpDialogButtonsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signUpDialogButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="#2F6979"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUpDialogTextView">
+
+        <Button
+            android:id="@+id/signUpDialogButtonOkay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="-7dp"
+            android:layout_weight="1"
+            android:backgroundTint="#CCE8DA"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Okay"
+            android:textAllCaps="false"
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/signUpDialogButtonCancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/signUpDialogButtonCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginBottom="-6dp"
+            android:layout_weight="1"
+            android:backgroundTint="#CCE8DA"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/signUpDialogButtonOkay"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
