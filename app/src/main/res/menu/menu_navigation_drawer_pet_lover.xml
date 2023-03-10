@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_pet_lover_lost_pet_alert"
+            android:title="Lost Pet Alert"
+            android:icon="@drawable/ic_lost_pet_alert" />
+
+        <item
+            android:id="@+id/nav_pet_lover_vet_appointments"
+            android:title="Vet Appointments"
+            android:icon="@drawable/ic_vet_appointments"/>
+
+        <item
+            android:id="@+id/nav_pet_lover_shop"
+            android:title="Shop"
+            android:icon="@drawable/ic_shop"/>
+
+        <item
+            android:id="@+id/nav_pet_lover_adoption"
+            android:title="Adoption"
+            android:icon="@drawable/ic_adoption"/>
+
+        <item
+            android:id="@+id/nav_pet_lover_social_feed"
+            android:title="Social Feed"
+            android:icon="@drawable/ic_social_feed"/>
+
+        <item
+            android:id="@+id/nav_pet_lover_identify_breed"
+            android:title="Identify Breed"
+            android:icon="@drawable/ic_identify_breed"/>
+
+        <item
+            android:id="@+id/nav_pet_lover_edit_profile"
+            android:title="Edit Profile"
+            android:icon="@drawable/ic_edit_profile"/>
+
+        <item
+            android:id="@+id/nav_pet_lover_log_out"
+            android:title="Log out"
+            android:icon="@drawable/ic_log_out" />
+
+    </group>
+
+</menu>
