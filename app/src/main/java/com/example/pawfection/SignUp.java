@@ -13,16 +13,13 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class SignUp extends AppCompatActivity {
 
     private RadioGroup signUpRadioGroup;
     private Dialog signUpButtonDialog;
     private Button signUpButtonSignUp;
-    private TextInputLayout signUpTextInputLayoutName = findViewById(R.id.signUpTextInputLayoutName);
-    private TextInputLayout getSignUpTextInputLayoutEmailAddress = findViewById(R.id.signUpTextInputLayoutEmailAddress);
+    private TextInputLayout signUpTextInputLayoutName;
+    private TextInputLayout getSignUpTextInputLayoutEmailAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +27,9 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         signUpRadioGroup = findViewById(R.id.signUpRadioGroup);
+        signUpTextInputLayoutName = findViewById(R.id.signUpTextInputLayoutName);
+        getSignUpTextInputLayoutEmailAddress = findViewById(R.id.signUpTextInputLayoutEmailAddress);
+
         signUpRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -41,8 +41,8 @@ public class SignUp extends AppCompatActivity {
         });
 
         signUpButtonDialog = new Dialog(SignUp.this);
-        signUpButtonDialog.setContentView(R.layout.sign_up_dialog);
-        signUpButtonDialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.sign_up_dialog_background));
+        signUpButtonDialog.setContentView(R.layout.dialog_sign_up);
+        signUpButtonDialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.background_dialog_sign_up));
         signUpButtonDialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         signUpButtonDialog.getWindow().getAttributes().windowAnimations = R.style.signUpDialogAnimation;
 
@@ -70,19 +70,13 @@ public class SignUp extends AppCompatActivity {
         signUpButtonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!validateName()) {
-                    return;
-                }
-                else if (signUpTextInputLayoutName.getEditText().getText().toString().isEmpty()) {
-                    signUpTextInputLayoutName.setError("Field cannot be empty.");
-                }
-                signUpButtonDialog.show();
+                    signUpButtonDialog.show();
             }
         });
 
     }
 
-    private Boolean validateName() {
+    /*private Boolean validateName() {
         String name = signUpTextInputLayoutName.getEditText().getText().toString();
 
         // For removing extra spaces in the middle of the text
@@ -136,6 +130,6 @@ public class SignUp extends AppCompatActivity {
 
         return true;
 
-    }
+    }*/
 
 }

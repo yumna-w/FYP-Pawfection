@@ -9,6 +9,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pawfection">
         <activity
+            android:name=".VetNavigationDrawerBase"
+            android:exported="false" />
+        <activity
+            android:name=".VetLostPetAlert"
+            android:exported="true" />
+        <activity
+            android:name=".PetLoverNavigationDrawerBase"
+            android:exported="false" />
+        <activity
+            android:name=".PetLoverLostPetAlert"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="false" />
         <activity

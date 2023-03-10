@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Pawfection" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.Pawfection" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,6 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAnimationStyle">@style/signUpDialogAnimation</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
 
     <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -21,9 +22,17 @@
         <item name="boxStrokeWidth">2dp</item>
         <item name="boxStrokeWidthFocused">4dp</item>
     </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">#CCE8DA</item>
+    </style>
     
     <style name="signUpDialogAnimation">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="MenuItemStyle">
+        <item name="android:fontFamily">@font/kufam_medium</item>
     </style>
 </resources>
