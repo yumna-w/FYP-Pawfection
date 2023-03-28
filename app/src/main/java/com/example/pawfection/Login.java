@@ -30,21 +30,21 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        loginImageViewPaw = findViewById(R.id.loginImageViewPaw);
+        loginTextViewWelcome = findViewById(R.id.loginTextViewWelcome);
+        loginTextViewLogin = findViewById(R.id.loginTextViewLogin);
+        loginTextViewEmailAddress = findViewById(R.id.loginTextViewEmailAddress);
+        loginTextInputLayoutEmailAddress = findViewById(R.id.loginTextInputLayoutEmailAddress);
+        loginTextViewPassword = findViewById(R.id.loginTextViewPassword);
+        loginTextInputLayoutPassword = findViewById(R.id.loginTextInputLayoutPassword);
+        loginButtonLogin = findViewById(R.id.loginButtonLogin);
+
         loginButtonSignUp = findViewById(R.id.loginButtonSignUp);
         loginButtonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Login.this,SignUp.class);
                 //startActivity(intent);
-
-                loginImageViewPaw = findViewById(R.id.loginImageViewPaw);
-                loginTextViewWelcome = findViewById(R.id.loginTextViewWelcome);
-                loginTextViewLogin = findViewById(R.id.loginTextViewLogin);
-                loginTextViewEmailAddress = findViewById(R.id.loginTextViewEmailAddress);
-                loginTextInputLayoutEmailAddress = findViewById(R.id.loginTextInputLayoutEmailAddress);
-                loginTextViewPassword = findViewById(R.id.loginTextViewPassword);
-                loginTextInputLayoutPassword = findViewById(R.id.loginTextInputLayoutPassword);
-                loginButtonLogin = findViewById(R.id.loginButtonLogin);
 
                 Pair[] pairs = new Pair[8];
 
@@ -60,6 +60,23 @@ public class Login extends AppCompatActivity {
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Login.this,pairs);
                 startActivity(intent, options.toBundle());
 
+            }
+        });
+
+        loginButtonLogin = findViewById(R.id.loginButtonLogin);
+        loginButtonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this,PetLoverLostPetAlert.class);
+
+                Pair[] pairs = new Pair[3];
+
+                pairs[0] = new Pair<View,String>(loginImageViewPaw, "mainLogo");
+                pairs[1] = new Pair<View,String>(loginTextViewWelcome, "loginText");
+                pairs[2] = new Pair<View,String>(loginTextViewLogin, "loginText2");
+
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Login.this,pairs);
+                startActivity(intent, options.toBundle());
             }
         });
     }

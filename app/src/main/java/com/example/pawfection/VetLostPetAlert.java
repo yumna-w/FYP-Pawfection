@@ -9,12 +9,12 @@ import com.example.pawfection.databinding.ActivityVetNavigationDrawerBaseBinding
 
 public class VetLostPetAlert extends VetNavigationDrawerBase {
 
-    ActivityVetNavigationDrawerBaseBinding activityVetNavigationDrawerBaseBinding;
+    ActivityVetLostPetAlertBinding activityVetLostPetAlertBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityVetNavigationDrawerBaseBinding = ActivityVetNavigationDrawerBaseBinding.inflate(getLayoutInflater());
-        setContentView(activityVetNavigationDrawerBaseBinding.getRoot());
+        activityVetLostPetAlertBinding = ActivityVetLostPetAlertBinding.inflate(getLayoutInflater());
+        setContentView(activityVetLostPetAlertBinding.getRoot());
     }
 }

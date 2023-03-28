@@ -22,7 +22,7 @@
         app:headerLayout="@layout/header_navigation_drawer"
         app:itemIconTint="#CCE8DA"
         app:itemTextColor="#CCE8DA"
-        app:menu="@menu/menu_navigation_drawer_vet"
-        app:itemTextAppearance="@style/MenuItemStyle" />
+        app:menu="@menu/menu_navigation_drawer_vet" />
+        <!--app:itemTextAppearance="@style/MenuItemStyle"-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

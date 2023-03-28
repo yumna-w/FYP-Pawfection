@@ -4,4 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VetLostPetAlert"/>
+    tools:context=".VetLostPetAlert"
+    android:background="#CCE8DA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/lostPetAlertImageViewPaw"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:src="@drawable/paw"
+            android:transitionName="mainLogo" />
+
+        <TextView
+            android:id="@+id/loginTextViewWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="112dp"
+            android:fontFamily="@font/kufam_extrabold"
+            android:text="HELLO \nDR LABEENAH!"
+            android:textColor="#2F6979"
+            android:textSize="35sp"
+            android:transitionName="loginText" />
+
+        <TextView
+            android:id="@+id/loginTextViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Have you seen these missing pets?"
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText2" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

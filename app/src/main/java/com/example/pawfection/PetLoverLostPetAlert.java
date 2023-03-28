@@ -4,16 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.pawfection.databinding.ActivityPetLoverLostPetAlertBinding;
 import com.example.pawfection.databinding.ActivityPetLoverNavigationDrawerBaseBinding;
 
 public class PetLoverLostPetAlert extends PetLoverNavigationDrawerBase {
 
-    ActivityPetLoverNavigationDrawerBaseBinding activityPetLoverNavigationDrawerBaseBinding;
+    ActivityPetLoverLostPetAlertBinding activityPetLoverLostPetAlertBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityPetLoverNavigationDrawerBaseBinding = ActivityPetLoverNavigationDrawerBaseBinding.inflate(getLayoutInflater());
-        setContentView(activityPetLoverNavigationDrawerBaseBinding.getRoot());
+        activityPetLoverLostPetAlertBinding = ActivityPetLoverLostPetAlertBinding.inflate(getLayoutInflater());
+        setContentView(activityPetLoverLostPetAlertBinding.getRoot());
     }
 }
