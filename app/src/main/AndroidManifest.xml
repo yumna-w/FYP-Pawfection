@@ -9,6 +9,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pawfection">
         <activity
+            android:name=".ForgotPasswordReset"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordCode"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordEmail"
+            android:exported="false" />
+        <activity
             android:name=".VetNavigationDrawerBase"
             android:exported="false" />
         <activity
