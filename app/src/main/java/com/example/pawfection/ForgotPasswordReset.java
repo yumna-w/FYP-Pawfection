@@ -31,7 +31,7 @@ public class ForgotPasswordReset extends AppCompatActivity {
         loginTextViewLogin = findViewById(R.id.loginTextViewLogin);
         loginTextViewPassword = findViewById(R.id.loginTextViewPassword);
         loginTextInputLayoutPassword = findViewById(R.id.loginTextInputLayoutPassword);
-        loginButtonLogin = findViewById(R.id.loginButtonLogin);
+        loginButtonLogin = findViewById(R.id.forgotPasswordEmailButtonSubmit);
 
         loginButtonSignUp = findViewById(R.id.loginButtonSignUp);
         loginButtonSignUp.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +58,7 @@ public class ForgotPasswordReset extends AppCompatActivity {
             }
         });
 
-        loginButtonLogin = findViewById(R.id.loginButtonLogin);
+        loginButtonLogin = findViewById(R.id.forgotPasswordEmailButtonSubmit);
         loginButtonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

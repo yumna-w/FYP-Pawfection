@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
         loginTextInputLayoutEmailAddress = findViewById(R.id.loginTextInputLayoutEmailAddress);
         loginTextViewPassword = findViewById(R.id.loginTextViewPassword);
         loginTextInputLayoutPassword = findViewById(R.id.loginTextInputLayoutPassword);
-        loginButtonLogin = findViewById(R.id.loginButtonLogin);
+        loginButtonLogin = findViewById(R.id.forgotPasswordEmailButtonSubmit);
 
         loginButtonSignUp = findViewById(R.id.loginButtonSignUp);
         loginButtonSignUp.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +63,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        loginButtonLogin = findViewById(R.id.loginButtonLogin);
+        loginButtonLogin = findViewById(R.id.forgotPasswordEmailButtonSubmit);
         loginButtonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
