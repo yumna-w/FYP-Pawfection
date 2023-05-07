@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".NewLostPetAlert">
+
+    <ImageView
+        android:id="@+id/newLostPetAlertImageViewPaw"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/paw"
+        android:transitionName="mainLogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="NEW ALERT"
+        android:textColor="#2F6979"
+        android:textSize="35sp"
+        android:transitionName="loginText" />
+
+    <TextView
+        android:id="@+id/newLostPetAlertTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_medium"
+        android:text="Lost your pet? Send an alert to all users."
+        android:textColor="#2F6979"
+        android:textSize="15sp"
+        android:transitionName="loginText2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/newLostPetAlertTextViewPetName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Pet name"
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText3" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/newLostPetAlertTextInputLayoutPetName"
+            style="@style/TextInputLayoutStyle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="loginField"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cocoa"
+                android:inputType="textCapWords"
+                android:textColor="#2F6979"
+                android:textColorHint="#2F6979"
+                android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/newLostPetAlertTextViewLastSeen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Last seen"
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText4" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/newLostPetAlertTextInputLayoutLastSeen"
+            style="@style/TextInputLayoutStyle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="loginField2"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="1 October 2023"
+                android:inputType="text"
+                android:textColor="#2F6979"
+                android:textColorHint="#2F6979"
+                android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/newLostPetAlertTextViewContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Contact number"
+            android:textColor="#2F6979"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/newLostPetAlertTextInputLayoutContactNumber"
+            style="@style/TextInputLayoutStyle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="03121234567"
+                android:inputType="text"
+                android:textColor="#2F6979"
+                android:textColorHint="#2F6979"
+                android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/newLostPetAlertTextViewImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Upload an image of your pet"
+            android:textColor="#2F6979"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/newLostPetAlertImageViewPet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/cat"/>
+
+        <Button
+            android:id="@+id/newLostPetAlertButtonSelectFromGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:text="Select from gallery"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:id="@+id/newLostPetAlertButtonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:text="Submit"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+    </LinearLayout>
+
+</LinearLayout>

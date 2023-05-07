@@ -64,7 +64,6 @@
             app:hintEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/forgetPasswordEmailButtonLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="example@domain.com"
@@ -124,7 +123,7 @@
             android:textColor="#CCE8DA" />
 
         <Button
-            android:id="@+id/forgotPasswordEmailButtonSubmit"
+            android:id="@+id/loginButtonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
