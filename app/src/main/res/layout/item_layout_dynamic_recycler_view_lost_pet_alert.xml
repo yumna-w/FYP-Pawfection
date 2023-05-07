@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
@@ -35,23 +35,23 @@
             android:fontFamily="@font/kufam_semibold"
             android:includeFontPadding="false"
             android:text="Merlin"
-            android:textSize="18sp"
             android:textColor="#CCE8DA"
-            app:layout_constraintHorizontal_bias="0.1"
-            app:layout_constraintVertical_bias="0.15"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/kufam_medium"
             android:includeFontPadding="false"
-            android:text="Last seen at 5:25 pm, 24th February 2023."
+            android:text="Last seen on 24th February 2023."
             android:textColor="#CCE8DA"
-            android:textSize="14sp"
+            android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"

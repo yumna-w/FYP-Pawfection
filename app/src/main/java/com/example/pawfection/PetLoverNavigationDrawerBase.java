@@ -6,10 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -39,6 +41,15 @@ public class PetLoverNavigationDrawerBase extends AppCompatActivity implements N
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        if (item.getTitle().toString().equals("Lost Pet Alert")) {
+            Intent intent = new Intent(getApplicationContext(), PetLoverLostPetAlert.class);
+            startActivity(intent);
+        }
+        else if (item.getTitle().toString().equals("Log out")) {
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            startActivity(intent);
+            Toast.makeText(PetLoverNavigationDrawerBase.this, "Logged out successfully.", Toast.LENGTH_SHORT).show();
+        }
         return false;
     }
 

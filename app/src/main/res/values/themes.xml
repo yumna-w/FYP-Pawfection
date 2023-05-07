@@ -18,7 +18,13 @@
     </style>
 
     <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/text_input_box_stroke_color</item>
+        <item name="boxStrokeColor">@color/text_input_box_stroke_color_dark</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeWidthFocused">4dp</item>
+    </style>
+
+    <style name="TextInputLayoutStyle2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_box_stroke_color_light</item>
         <item name="boxStrokeWidth">2dp</item>
         <item name="boxStrokeWidthFocused">4dp</item>
     </style>

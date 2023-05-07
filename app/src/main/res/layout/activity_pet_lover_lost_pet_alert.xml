@@ -45,7 +45,7 @@
         tools:listitem="@layout/list_item_lost_pet_alert">
 
     </ListView>-->
-    <ScrollView
+    <!--<ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -54,6 +54,27 @@
             android:layout_height="200dp"
             android:id="@+id/petLoverLostPetAlertRecyclerView" />
 
-    </ScrollView>
+    </ScrollView>-->
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/petLoverLostPetAlertRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/petLoverLostPetAlertNewAlertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#A39FE9"
+        android:text="New Alert"
+        android:textColor="#CCE8DA"
+        android:transitionName="loginButton" />
 
 </LinearLayout>
