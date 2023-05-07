@@ -63,9 +63,9 @@ public class Login extends AppCompatActivity {
         loginTextInputLayoutEmailAddress = findViewById(R.id.loginTextInputLayoutEmailAddress);
         loginTextViewPassword = findViewById(R.id.loginTextViewPassword);
         loginTextInputLayoutPassword = findViewById(R.id.loginTextInputLayoutPassword);
+
         loginButtonLogin = findViewById(R.id.loginButtonLogin);
         loginButtonSignUp = findViewById(R.id.loginButtonSignUp);
-        loginButtonLogin = findViewById(R.id.loginButtonLogin);
 
         loginButtonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,8 +92,6 @@ public class Login extends AppCompatActivity {
 
         Retrofit retrofit = RetrofitClient.getInstance();
         myAPI = retrofit.create(NodeJS.class);
-
-
 
         loginButtonLogin.setOnClickListener(new View.OnClickListener() {
             @Override

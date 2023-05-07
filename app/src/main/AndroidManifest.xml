@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Pawfection">
         <activity
             android:name=".NewLostPetAlert"
+            android:exported="false"/>
+        <activity
+            android:name=".ForgotPasswordReset"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordCode"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordEmail"
             android:exported="false" />
         <activity
             android:name=".VetNavigationDrawerBase"
