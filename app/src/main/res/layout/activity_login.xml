@@ -108,6 +108,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/loginButtonForgotPassword"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="223dp"
             android:layout_height="wrap_content"

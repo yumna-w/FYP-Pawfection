@@ -14,65 +14,52 @@ import android.widget.TextView;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class ForgotPasswordReset extends AppCompatActivity {
-    private Button loginButtonSignUp;
-    private ImageView loginImageViewPaw;
-    private TextView loginTextViewWelcome;
-    private TextView loginTextViewLogin;
 
-    private TextView loginTextViewPassword;
-    private TextInputLayout loginTextInputLayoutPassword;
-    private Button loginButtonLogin;
+    private ImageView forgotPasswordResetImageViewPaw;
+    private TextView forgotPasswordResetTextViewForgotPassword;
+    private TextView forgotPasswordResetTextViewEnterPassword;
+    private TextView forgotPasswordResetTextViewPassword;
+    private TextInputLayout forgotPasswordResetTextInputLayoutPassword;
+    private TextView forgotPasswordResetTextViewPassword2;
+    private TextInputLayout forgotPasswordResetTextInputLayoutPassword2;
+    private Button forgotPasswordResetButtonReset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password_reset);
-        loginImageViewPaw = findViewById(R.id.loginImageViewPaw);
-        loginTextViewWelcome = findViewById(R.id.loginTextViewWelcome);
-        loginTextViewLogin = findViewById(R.id.loginTextViewLogin);
-        loginTextViewPassword = findViewById(R.id.loginTextViewPassword);
-        loginTextInputLayoutPassword = findViewById(R.id.loginTextInputLayoutPassword);
-        loginButtonLogin = findViewById(R.id.forgotPasswordEmailButtonSubmit);
 
-        loginButtonSignUp = findViewById(R.id.loginButtonSignUp);
-        loginButtonSignUp.setOnClickListener(new View.OnClickListener() {
+        forgotPasswordResetImageViewPaw = findViewById(R.id.forgotPasswordResetImageViewPaw);
+        forgotPasswordResetTextViewForgotPassword = findViewById(R.id.forgotPasswordResetTextViewForgotPassword);
+        forgotPasswordResetTextViewEnterPassword = findViewById(R.id.forgotPasswordResetTextViewEnterPassword);
+        forgotPasswordResetTextViewPassword = findViewById(R.id.forgotPasswordResetTextViewPassword);
+        forgotPasswordResetTextInputLayoutPassword = findViewById(R.id.forgotPasswordResetTextInputLayoutPassword);
+        forgotPasswordResetTextViewPassword2 = findViewById(R.id.forgotPasswordResetTextViewPassword2);
+        forgotPasswordResetTextInputLayoutPassword2 = findViewById(R.id.forgotPasswordResetTextInputLayoutPassword2);
+        forgotPasswordResetButtonReset = findViewById(R.id.forgotPasswordResetButtonReset);
 
+        forgotPasswordResetButtonReset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ForgotPasswordReset.this,SignUp.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(ForgotPasswordReset.this,Login.class);
                 //startActivity(intent);
 
                 Pair[] pairs = new Pair[8];
 
-                pairs[0] = new Pair<View,String>(loginImageViewPaw, "mainLogo");
-                pairs[1] = new Pair<View,String>(loginTextViewWelcome, "loginText");
-                pairs[2] = new Pair<View,String>(loginTextViewLogin, "loginText2");
-                pairs[3] = new Pair<View,String>(loginTextViewEmailAddress, "loginText3");
-                pairs[4] = new Pair<View,String>(loginTextInputLayoutEmailAddress, "loginField");
-                pairs[5] = new Pair<View,String>(loginTextViewPassword, "loginText4");
-                pairs[6] = new Pair<View,String>(loginTextInputLayoutPassword, "loginField2");
-                pairs[7] = new Pair<View,String>(loginButtonLogin, "loginButton");
-
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(ForgotPasswordReset.this,pairs);
-                startActivity(intent, options.toBundle());
-
-            }
-        });
-
-        loginButtonLogin = findViewById(R.id.forgotPasswordEmailButtonSubmit);
-        loginButtonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ForgotPasswordReset.this,PetLoverLostPetAlert.class);
-
-                Pair[] pairs = new Pair[3];
-
-                pairs[0] = new Pair<View,String>(loginImageViewPaw, "mainLogo");
-                pairs[1] = new Pair<View,String>(loginTextViewWelcome, "loginText");
-                pairs[2] = new Pair<View,String>(loginTextViewLogin, "loginText2");
+                pairs[0] = new Pair<View,String>(forgotPasswordResetImageViewPaw, "mainLogo");
+                pairs[1] = new Pair<View,String>(forgotPasswordResetTextViewForgotPassword, "loginText");
+                pairs[2] = new Pair<View,String>(forgotPasswordResetTextViewEnterPassword, "loginText2");
+                pairs[3] = new Pair<View,String>(forgotPasswordResetTextViewPassword, "loginText3");
+                pairs[4] = new Pair<View,String>(forgotPasswordResetTextInputLayoutPassword, "loginField");
+                pairs[5] = new Pair<View,String>(forgotPasswordResetTextViewPassword2, "loginText4");
+                pairs[6] = new Pair<View,String>(forgotPasswordResetTextInputLayoutPassword2, "loginField2");
+                pairs[7] = new Pair<View,String>(forgotPasswordResetButtonReset, "loginButton");
 
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(ForgotPasswordReset.this,pairs);
                 startActivity(intent, options.toBundle());
             }
         });
+
+
+
     }
 }

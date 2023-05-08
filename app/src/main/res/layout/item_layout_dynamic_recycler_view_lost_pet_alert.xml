@@ -29,12 +29,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/petName"
+            android:id="@+id/lostPetAlertItemTextViewPetName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/kufam_semibold"
             android:includeFontPadding="false"
-            android:text="Merlin"
             android:textColor="#CCE8DA"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -45,18 +44,33 @@
             app:layout_constraintVertical_bias="0.15" />
 
         <TextView
+            android:id="@+id/lostPetAlertItemTextViewLastSeen"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/kufam_medium"
             android:includeFontPadding="false"
-            android:text="Last seen on 24th February 2023."
             android:textColor="#CCE8DA"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="@+id/petName"
-            app:layout_constraintTop_toBottomOf="@+id/petName"
+            app:layout_constraintStart_toStartOf="@+id/lostPetAlertItemTextViewPetName"
+            app:layout_constraintTop_toBottomOf="@+id/lostPetAlertItemTextViewPetName"
+            app:layout_constraintVertical_bias="0" />
+
+        <TextView
+            android:id="@+id/lostPetAlertItemTextViewContactNumber"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:includeFontPadding="false"
+            android:textColor="#CCE8DA"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/lostPetAlertItemTextViewLastSeen"
+            app:layout_constraintTop_toBottomOf="@+id/lostPetAlertItemTextViewLastSeen"
             app:layout_constraintVertical_bias="0" />
 
 

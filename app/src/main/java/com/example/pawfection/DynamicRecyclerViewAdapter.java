@@ -27,11 +27,15 @@ class LoadingViewHolder extends RecyclerView.ViewHolder {
 
 class ItemViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView petName;
+    public TextView lostPetAlertItemTextViewPetName;
+    public TextView lostPetAlertItemTextViewLastSeen;
+    public TextView lostPetAlertItemTextViewContactNumber;
 
     public ItemViewHolder(@NonNull View itemView) {
         super(itemView);
-        petName = itemView.findViewById(R.id.petName);
+        lostPetAlertItemTextViewPetName = (TextView)itemView.findViewById(R.id.lostPetAlertItemTextViewPetName);
+        lostPetAlertItemTextViewLastSeen = (TextView)itemView.findViewById(R.id.lostPetAlertItemTextViewLastSeen);
+        lostPetAlertItemTextViewContactNumber = (TextView)itemView.findViewById(R.id.lostPetAlertItemTextViewContactNumber);
     }
 }
 
@@ -94,7 +98,9 @@ public class DynamicRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         if (holder instanceof ItemViewHolder) {
             DynamicRecyclerViewModel item = items.get(position);
             ItemViewHolder viewHolder = (ItemViewHolder) holder;
-            viewHolder.petName.setText(items.get(position).getPetName());
+            viewHolder.lostPetAlertItemTextViewPetName.setText(items.get(position).getPetName());
+            viewHolder.lostPetAlertItemTextViewLastSeen.setText("Last seen on " + items.get(position).getLastSeen() + ".");
+            viewHolder.lostPetAlertItemTextViewContactNumber.setText("Contact number: " + items.get(position).getContactNumber());
         }
         else if (holder instanceof LoadingViewHolder) {
             LoadingViewHolder loadingViewHolder = (LoadingViewHolder) holder;

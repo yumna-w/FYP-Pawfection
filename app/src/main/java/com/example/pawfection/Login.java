@@ -26,6 +26,8 @@ import retrofit2.Retrofit;
 
 public class Login extends AppCompatActivity {
 
+    public static int userID;
+    public static String name;
     private Button loginButtonSignUp;
     private ImageView loginImageViewPaw;
     private TextView loginTextViewWelcome;
@@ -35,6 +37,7 @@ public class Login extends AppCompatActivity {
     private TextView loginTextViewPassword;
     private TextInputLayout loginTextInputLayoutPassword;
     private Button loginButtonLogin;
+    private Button loginButtonForgotPassword;
     NodeJS myAPI;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     int accountTypeFlag = 0;
@@ -66,6 +69,7 @@ public class Login extends AppCompatActivity {
 
         loginButtonLogin = findViewById(R.id.loginButtonLogin);
         loginButtonSignUp = findViewById(R.id.loginButtonSignUp);
+        loginButtonForgotPassword = findViewById(R.id.loginButtonForgotPassword);
 
         loginButtonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +113,16 @@ public class Login extends AppCompatActivity {
 
                                     JSONObject jsonObject = new JSONObject(s);
                                     String accountType = jsonObject.getString("accountType");
+                                    userID = jsonObject.getInt("id");
+                                    String fullName = jsonObject.getString("fullName");
+                                    for (int i = 0; i < fullName.length(); i++) {
+                                        char c = fullName.charAt(i);
+                                        if (c == ' ') {
+                                            break;
+                                        }
+                                        name += c;
+                                    }
+
                                     if (accountType.equals("vet")) {
                                         intent = new Intent(Login.this,VetLostPetAlert.class);
                                     }
@@ -130,5 +144,24 @@ public class Login extends AppCompatActivity {
                 );
             }
         });
+
+        loginButtonForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this,ForgotPasswordEmail.class);
+                Pair[] pairs = new Pair[5];
+
+                pairs[0] = new Pair<View,String>(loginImageViewPaw, "mainLogo");
+                pairs[1] = new Pair<View,String>(loginTextViewWelcome, "loginText");
+                pairs[2] = new Pair<View,String>(loginTextViewLogin, "loginText2");
+                pairs[3] = new Pair<View,String>(loginTextViewEmailAddress, "loginText3");
+                pairs[4] = new Pair<View,String>(loginTextInputLayoutEmailAddress, "loginField");
+
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Login.this,pairs);
+                startActivity(intent, options.toBundle());
+
+            }
+        });
+
     }
 }
