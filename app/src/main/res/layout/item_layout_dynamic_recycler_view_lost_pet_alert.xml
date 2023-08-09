@@ -41,7 +41,8 @@
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.15" />
+            app:layout_constraintVertical_bias="0.15"
+            android:text="Merlin"/>
 
         <TextView
             android:id="@+id/lostPetAlertItemTextViewLastSeen"
@@ -56,7 +57,8 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@+id/lostPetAlertItemTextViewPetName"
             app:layout_constraintTop_toBottomOf="@+id/lostPetAlertItemTextViewPetName"
-            app:layout_constraintVertical_bias="0" />
+            app:layout_constraintVertical_bias="0"
+            android:text="Last seen"/>
 
         <TextView
             android:id="@+id/lostPetAlertItemTextViewContactNumber"
@@ -71,7 +73,8 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@+id/lostPetAlertItemTextViewLastSeen"
             app:layout_constraintTop_toBottomOf="@+id/lostPetAlertItemTextViewLastSeen"
-            app:layout_constraintVertical_bias="0" />
+            app:layout_constraintVertical_bias="0"
+            android:text="Contact number"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".PetLoverEditProfile">
+
+    <ImageView
+        android:id="@+id/petLoverEditProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/paw"
+        android:transitionName="mainLogo" />
+
+    <TextView
+        android:id="@+id/petLoverEditProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="EDIT PROFILE"
+        android:textColor="#2F6979"
+        android:textSize="35sp"
+        android:transitionName="loginText" />
+
+    <TextView
+        android:id="@+id/petLoverEditProfileTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_medium"
+        android:text="Add your pets to your profile!"
+        android:textColor="#2F6979"
+        android:textSize="15sp"
+        android:transitionName="loginText2" />
+
+    <TextView
+        android:id="@+id/petLoverEditProfileTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_semibold"
+        android:text="Current pets"
+        android:textColor="#2F6979"
+        android:textSize="15sp"
+        android:transitionName="loginText3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/petLoverEditProfileRecyclerViewCurrentPets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/petLoverEditProfileButtonAddPet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#A39FE9"
+        android:text="Add pet"
+        android:textColor="#CCE8DA"
+        android:transitionName="loginButton" />
+
+    <Button
+        android:id="@+id/petLoverEditProfileButtonEditAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#A39FE9"
+        android:text="Edit Account"
+        android:textColor="#CCE8DA"
+        android:transitionName="loginButton" />
+
+</LinearLayout>

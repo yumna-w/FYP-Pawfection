@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    tools:context=".VetAppointmentsSetUpForm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCE8DA"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/vetAppointmentsSetUpFormImageViewPaw"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:src="@drawable/paw"
+            android:transitionName="mainLogo" />
+
+        <TextView
+            android:id="@+id/vetAppointmentsSetUpFormTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="112dp"
+            android:fontFamily="@font/kufam_extrabold"
+            android:text="APPOINTMENT TIMINGS"
+            android:textColor="#2F6979"
+            android:textSize="35sp"
+            android:transitionName="loginText" />
+
+        <TextView
+            android:id="@+id/vetAppointmentsSetUpFormTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Select your available time slots."
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vetAppointmentsSetUpFormTextViewQualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:text="Qualification"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:transitionName="loginText3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vetAppointmentsSetUpFormTextInputLayoutQualification"
+                style="@style/TextInputLayoutStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="loginField"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="#2F6979"
+                    android:textColorHint="#2F6979"
+                    android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/vetAppointmentsSetUpFormTextViewAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:layout_marginTop="5dp"
+                android:text="Address of clinic or hospital"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:transitionName="loginText3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vetAppointmentsSetUpFormTextInputLayoutAddress"
+                style="@style/TextInputLayoutStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="loginField"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="#2F6979"
+                    android:textColorHint="#2F6979"
+                    android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/vetAppointmentsSetUpFormTextViewArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:layout_marginTop="5dp"
+                android:text="Area"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:transitionName="loginText3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vetAppointmentsSetUpFormTextInputLayoutArea"
+                style="@style/TextInputLayoutStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="loginField"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="#2F6979"
+                    android:hint="E.g. Gulshan-e-Iqbal"
+                    android:textColorHint="#2F6979"
+                    android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/vetAppointmentsSetUpFormTextViewTimeSlot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:layout_marginTop="5dp"
+                android:text="Available time slot"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:transitionName="loginText3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vetAppointmentsSetUpFormTextInputLayout"
+                style="@style/TextInputLayoutDropdownMenuStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="loginField"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vetAppointmentsSetUpFormAutoCompleteTextView" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/vetAppointmentsSetUpFormTextViewDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:layout_marginTop="5dp"
+                android:text="Days"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:transitionName="loginText3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-10dp">
+
+            <CheckBox
+                android:id="@+id/vetAppointmentsSetUpFormCheckBoxMonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:paddingTop="8dp"
+                android:text="Mon" />
+
+            <CheckBox
+                android:id="@+id/vetAppointmentsSetUpFormCheckBoxTuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:paddingTop="8dp"
+                android:text="Tue" />
+
+            <CheckBox
+                android:id="@+id/vetAppointmentsSetUpFormCheckBoxWednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:paddingTop="8dp"
+                android:text="Wed" />
+
+            <CheckBox
+                android:id="@+id/vetAppointmentsSetUpFormCheckBoxThursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:paddingTop="8dp"
+                android:text="Thu" />
+
+            <CheckBox
+                android:id="@+id/vetAppointmentsSetUpFormCheckBoxFriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:paddingTop="8dp"
+                android:text="Fri" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/vetAppointmentsSetUpFormButtonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:layout_marginTop="10dp"
+            android:text="Submit"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>

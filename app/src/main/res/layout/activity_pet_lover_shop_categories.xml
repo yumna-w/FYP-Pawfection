@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".PetLoverShopCategories">
+
+    <ImageView
+        android:id="@+id/petLoverShopCategoriesImageViewPaw"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/paw"
+        android:transitionName="mainLogo" />
+
+    <TextView
+        android:id="@+id/petLoverShopCategoriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="112dp"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="SHOP FOR NECESSITIES"
+        android:textColor="#2F6979"
+        android:textSize="35sp"
+        android:transitionName="loginText" />
+
+    <TextView
+        android:id="@+id/petLoverShopCategoriesTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_medium"
+        android:text="Choose a category from below."
+        android:textColor="#2F6979"
+        android:textSize="15sp"
+        android:transitionName="loginText2" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2F6979"
+        android:textSize="35sp"
+        android:text="FOOD"
+        android:fontFamily="@font/kufam_medium"
+        android:textColor="#CCE8DA"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2F6979"
+        android:textSize="35sp"
+        android:text="ACCESSORIES"
+        android:fontFamily="@font/kufam_medium"
+        android:textColor="#CCE8DA"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2F6979"
+        android:textSize="35sp"
+        android:text="LITTER"
+        android:fontFamily="@font/kufam_medium"
+        android:textColor="#CCE8DA"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2F6979"
+        android:textSize="35sp"
+        android:text="MEDICINES"
+        android:fontFamily="@font/kufam_medium"
+        android:textColor="#CCE8DA"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2F6979"
+        android:textSize="35sp"
+        android:text="TOYS"
+        android:fontFamily="@font/kufam_medium"
+        android:textColor="#CCE8DA"
+        android:textAlignment="center" />
+
+
+
+</LinearLayout>

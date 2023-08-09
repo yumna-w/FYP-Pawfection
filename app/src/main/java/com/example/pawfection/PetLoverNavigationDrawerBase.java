@@ -50,6 +50,14 @@ public class PetLoverNavigationDrawerBase extends AppCompatActivity implements N
             startActivity(intent);
             Toast.makeText(PetLoverNavigationDrawerBase.this, "Logged out successfully.", Toast.LENGTH_SHORT).show();
         }
+        else if (item.getTitle().toString().equals("Vet Appointments")) {
+            Intent intent = new Intent(getApplicationContext(), PetLoverVetAppointmentsCity.class);
+            startActivity(intent);
+        }
+        else if (item.getTitle().toString().equals("Shop")) {
+            Intent intent = new Intent(getApplicationContext(), PetLoverShopCategories.class);
+            startActivity(intent);
+        }
         return false;
     }
 

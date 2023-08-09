@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_vertical"
+    tools:context=".VetAppointmentsSetUpReminder">
+
+    <ImageView
+        android:id="@+id/vetAppointmentsSetUpReminderImageViewPaw"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/paw"
+        android:transitionName="mainLogo"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/vetAppointmentsSetUpReminderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="PLEASE COMPLETE YOUR DETAILS SO PET LOVERS MAY BOOK APPOINTMENTS WITH YOU."
+        android:textColor="#2F6979"
+        android:textSize="35sp"
+        android:transitionName="loginText"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/vetAppointmentsSetUpReminderButtonProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#A39FE9"
+        android:layout_marginTop="10dp"
+        android:text="Proceed"
+        android:textColor="#CCE8DA"
+        android:transitionName="loginButton" />
+
+</LinearLayout>

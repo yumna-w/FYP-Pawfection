@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".PetLoverVetAppointmentsVetProfile"
+    >
+
+    <ImageView
+        android:id="@+id/petLoverVetAppointmentsVetProfileImageViewPaw"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:baselineAlignBottom="false"
+        android:padding="10dp"
+        android:src="@drawable/paw"
+        android:transitionName="mainLogo" />
+
+    <TextView
+        android:id="@+id/petLoverVetAppointmentsVetProfileTextViewVetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="DR LABEENAH KHAN"
+        android:textColor="#2F6979"
+        android:textSize="35sp"
+        android:transitionName="loginText" />
+
+    <TextView
+        android:id="@+id/petLoverVetAppointmentsVetProfileQualification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_medium"
+        android:text="PhD in Veterinary Science"
+        android:textColor="#2F6979"
+        android:textSize="15sp"
+        android:transitionName="loginText3" />
+
+    <TextView
+        android:id="@+id/petLoverVetAppointmentsVetProfileTextViewAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_semibold"
+        android:text="Flat 17-D, Askari 3, School Road, Cantt, Karachi."
+        android:textColor="#2F6979"
+        android:textSize="15sp"
+        android:transitionName="loginText2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/petLoverVetAppointmentsVetProfileTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Choose the pet you are booking an appointment for."
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText2" />
+
+        <TextView
+            android:id="@+id/petLoverVetAppointmentsVetProfileTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Pet"
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText3" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/petLoverVetAppointmentsVetProfileTextInputLayoutAppointmentPet"
+            style="@style/TextInputLayoutDropdownMenuStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="loginField"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            android:paddingBottom="20dp">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/petLoverVetAppointmentsVetProfileAutoCompleteTextViewAppointmentPet" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/petLoverVetAppointmentsVetProfileTextView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Select a day to book an appointment."
+            android:textColor="#2F6979"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/petLoverVetAppointmentsVetProfileTextView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Day"
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText3" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/petLoverVetAppointmentsVetProfileTextInputLayoutAppointmentDay"
+            style="@style/TextInputLayoutDropdownMenuStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="loginField"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/petLoverVetAppointmentsVetProfileAutoCompleteTextViewAppointmentDay" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/petLoverVetAppointmentsVetProfileButtonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:layout_marginTop="10dp"
+            android:text="Submit"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+    </LinearLayout>
+
+</LinearLayout>

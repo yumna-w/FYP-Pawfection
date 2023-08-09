@@ -15,7 +15,7 @@
         android:padding="20dp">
 
         <ImageView
-            android:id="@+id/lostPetAlertImageViewPaw"
+            android:id="@+id/vetLostPetAlertImageViewPaw"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:padding="10dp"
@@ -23,7 +23,7 @@
             android:transitionName="mainLogo" />
 
         <TextView
-            android:id="@+id/loginTextViewWelcome"
+            android:id="@+id/vetLostPetAlertTextViewHello"
             android:layout_width="wrap_content"
             android:layout_height="112dp"
             android:fontFamily="@font/kufam_extrabold"
@@ -33,7 +33,7 @@
             android:transitionName="loginText" />
 
         <TextView
-            android:id="@+id/loginTextViewLogin"
+            android:id="@+id/vetLostPetAlertTextViewHaveYou"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/kufam_medium"
@@ -41,6 +41,16 @@
             android:textColor="#2F6979"
             android:textSize="15sp"
             android:transitionName="loginText2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vetLostPetAlertRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
 

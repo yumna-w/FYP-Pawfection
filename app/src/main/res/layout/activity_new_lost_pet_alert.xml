@@ -18,6 +18,7 @@
         android:transitionName="mainLogo" />
 
     <TextView
+        android:id="@+id/newLostPetAlertTextView"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:fontFamily="@font/kufam_extrabold"

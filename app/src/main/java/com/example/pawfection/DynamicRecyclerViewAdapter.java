@@ -83,7 +83,7 @@ public class DynamicRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == VIEW_TYPE_ITEM) {
             View view = LayoutInflater.from(activity).inflate(R.layout.item_layout_dynamic_recycler_view_lost_pet_alert, parent, false);
-            return  new LoadingViewHolder(view);
+            return  new ItemViewHolder(view);
         }
         else if (viewType == VIEW_TYPE_LOADING) {
             View view = LayoutInflater.from(activity).inflate(R.layout.progress_bar_dynamic_recycler_view_lost_pet_alert, parent, false);

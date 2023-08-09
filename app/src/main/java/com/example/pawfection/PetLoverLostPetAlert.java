@@ -76,7 +76,7 @@ public class PetLoverLostPetAlert extends PetLoverNavigationDrawerBase {
                     public void accept(String s) throws Throwable {
                         jsonArray = new JSONArray(s);
 
-                        for (int i = 0; i < 10; i++) {
+                        for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject jsonObject = jsonArray.getJSONObject(i);
                             String petName = jsonObject.getString("petName");
                             String lastSeen = jsonObject.getString("lastSeen");
@@ -86,11 +86,12 @@ public class PetLoverLostPetAlert extends PetLoverNavigationDrawerBase {
                             DynamicRecyclerViewModel item = new DynamicRecyclerViewModel(petName, lastSeen, contactNumber);
                             items.add(item);
                         }
+                        dynamicRecyclerViewAdapter.notifyDataSetChanged();
                     }
                 }));
 
         RecyclerView dynamicRecyclerView = findViewById(R.id.petLoverLostPetAlertRecyclerView);
-        dynamicRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        dynamicRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         dynamicRecyclerViewAdapter = new DynamicRecyclerViewAdapter(dynamicRecyclerView, this, items);
         dynamicRecyclerView.setAdapter(dynamicRecyclerViewAdapter);
 
@@ -108,12 +109,14 @@ public class PetLoverLostPetAlert extends PetLoverNavigationDrawerBase {
 
                             int index = items.size();
                             int end = index + 10;
-                            for (int i = index;i < end;i++) {
-                                String petName = UUID.randomUUID().toString();
-                                String a = "a";
-                                String b = "b";
-                                DynamicRecyclerViewModel item = new DynamicRecyclerViewModel(petName,a,b);
-                                items.add(item);
+                            for (int i = 10;i < end;i++) {
+                                if (i > index -1) {
+                                    String petName = UUID.randomUUID().toString();
+                                    String a = "a";
+                                    String b = "b";
+                                    DynamicRecyclerViewModel item = new DynamicRecyclerViewModel(petName,a,b);
+                                    items.add(item);
+                                }
                             }
                             dynamicRecyclerViewAdapter.notifyDataSetChanged();
                             dynamicRecyclerViewAdapter.setLoaded();
@@ -146,6 +149,98 @@ public class PetLoverLostPetAlert extends PetLoverNavigationDrawerBase {
                 startActivity(intent, options.toBundle());
             }
         });
+
+    }
+
+    public void onResume(){
+        super.onResume();
+
+        Retrofit retrofit = RetrofitClient.getInstance();
+        myAPI = retrofit.create(NodeJS.class);
+
+        compositeDisposable.add(myAPI.getAlerts()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<String>() {
+                    @Override
+                    public void accept(String s) throws Throwable {
+                        jsonArray = new JSONArray(s);
+
+                        for (int i = 0; i < 10; i++) {
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
+                            String petName = jsonObject.getString("petName");
+                            String lastSeen = jsonObject.getString("lastSeen");
+                            String contactNumber = jsonObject.getString("contactNumber");
+                            System.out.println(petName + lastSeen + contactNumber);
+
+                            DynamicRecyclerViewModel item = new DynamicRecyclerViewModel(petName, lastSeen, contactNumber);
+                            items.add(item);
+                        }
+                        dynamicRecyclerViewAdapter.notifyDataSetChanged();
+                    }
+                }));
+
+        RecyclerView dynamicRecyclerView = findViewById(R.id.petLoverLostPetAlertRecyclerView);
+        dynamicRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        dynamicRecyclerViewAdapter = new DynamicRecyclerViewAdapter(dynamicRecyclerView, this, items);
+        dynamicRecyclerView.setAdapter(dynamicRecyclerViewAdapter);
+
+        dynamicRecyclerViewAdapter.setLoadMore(new LoadMore() {
+            @Override
+            public void onLoadMore() {
+                if (items.size() <= 10) {
+                    items.add(null);
+                    dynamicRecyclerViewAdapter.notifyItemInserted(items.size() - 1);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            items.remove(items.size() - 1);
+                            dynamicRecyclerViewAdapter.notifyItemRemoved(items.size());
+
+                            int index = items.size();
+                            int end = index + 10;
+                            for (int i = 10;i < end;i++) {
+                                if (i > index -1) {
+                                    String petName = UUID.randomUUID().toString();
+                                    String a = "a";
+                                    String b = "b";
+                                    DynamicRecyclerViewModel item = new DynamicRecyclerViewModel(petName,a,b);
+                                    items.add(item);
+                                }
+
+                            }
+                            dynamicRecyclerViewAdapter.notifyDataSetChanged();
+                            dynamicRecyclerViewAdapter.setLoaded();
+                        }
+                    }, 4000);
+                }
+                else
+                    Toast.makeText(PetLoverLostPetAlert.this, "End of alerts.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        petLoverLostPetAlertNewAlertButton = findViewById(R.id.petLoverLostPetAlertNewAlertButton);
+        petLoverLostPetAlertTextViewHello = findViewById(R.id.petLoverLostPetAlertTextViewHello);
+        petLoverLostPetAlertTextViewHaveYou = findViewById(R.id.petLoverLostPetAlertTextViewHaveYou);
+        petLoverLostPetAlertImageViewPaw = findViewById(R.id.petLoverLostPetAlertImageViewPaw);
+
+        petLoverLostPetAlertNewAlertButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PetLoverLostPetAlert.this,NewLostPetAlert.class);
+
+                Pair[] pairs = new Pair[4];
+
+                pairs[0] = new Pair<View,String>(petLoverLostPetAlertImageViewPaw, "mainLogo");
+                pairs[1] = new Pair<View,String>(petLoverLostPetAlertTextViewHello, "loginText");
+                pairs[2] = new Pair<View,String>(petLoverLostPetAlertTextViewHaveYou, "loginText2");
+                pairs[3] = new Pair<View,String>(petLoverLostPetAlertNewAlertButton, "loginButton");
+
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(PetLoverLostPetAlert.this,pairs);
+                startActivity(intent, options.toBundle());
+            }
+        });
+
 
     }
 }

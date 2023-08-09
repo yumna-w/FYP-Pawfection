@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".PetLoverVetAppointmentsCity">
+
+    <ImageView
+        android:id="@+id/petLoverVetAppointmentsCityImageViewPaw"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:src="@drawable/paw"
+        android:transitionName="mainLogo" />
+
+    <TextView
+        android:id="@+id/petLoverVetAppointmentsCityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="112dp"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="BOOK VET APPOINTMENT"
+        android:textColor="#2F6979"
+        android:textSize="35sp"
+        android:transitionName="loginText" />
+
+    <TextView
+        android:id="@+id/petLoverVetAppointmentsCityTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_medium"
+        android:text="Choose your location from the menu."
+        android:textColor="#2F6979"
+        android:textSize="15sp"
+        android:transitionName="loginText2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/petLoverVetAppointmentsCityTextView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="City"
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText3" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/petLoverVetAppointmentsCityTextInputLayout"
+            style="@style/TextInputLayoutDropdownMenuStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="loginField"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/petLoverVetAppointmentsCityAutoCompleteTextView" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/petLoverVetAppointmentsCityButtonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:layout_marginTop="10dp"
+            android:text="Search"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+        <Button
+            android:id="@+id/petLoverVetAppointmentsCityButtonPastAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:layout_marginTop="10dp"
+            android:text="View Past Appointments"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+        <Button
+            android:id="@+id/petLoverVetAppointmentsCityButtonUpcomingAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:layout_marginTop="10dp"
+            android:text="View Upcoming Appointments"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+    </LinearLayout>
+
+</LinearLayout>

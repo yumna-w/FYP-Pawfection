@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pawfection">
+        android:theme="@style/Theme.Pawfection"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".PetLoverEditProfile"
+            android:exported="true" />
+        <activity
+            android:name=".PetLoverPetSetUpReminder"
+            android:exported="false" />
+        <activity
+            android:name=".VetAppointmentsSetUpForm"
+            android:exported="false" />
+        <activity
+            android:name=".VetAppointmentsSetUpReminder"
+            android:exported="false" />
+        <activity
+            android:name=".PetLoverVetAppointmentsVetProfile"
+            android:exported="false" />
+        <activity
+            android:name=".PetLoverShopCategories"
+            android:exported="false" />
+        <activity
+            android:name=".PetLoverVetAppointmentsVetsList"
+            android:exported="false" />
+        <activity
+            android:name=".PetLoverVetAppointmentsCity"
+            android:exported="false" />
         <activity
             android:name=".NewLostPetAlert"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ForgotPasswordReset"
             android:exported="false" />
