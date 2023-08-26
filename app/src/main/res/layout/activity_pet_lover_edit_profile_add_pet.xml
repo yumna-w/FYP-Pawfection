@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CCE8DA"
-    tools:context=".VetAppointmentsSetUpForm">
+    tools:context=".PetLoverEditProfileAddPet">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="112dp"
             android:fontFamily="@font/kufam_extrabold"
-            android:text="APPOINTMENT TIMINGS"
+            android:text="ADD PET TO YOUR PROFILE"
             android:textColor="#2F6979"
             android:textSize="35sp"
             android:transitionName="loginText" />
@@ -37,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/kufam_medium"
-            android:text="Select your available time slots."
+            android:text="Enter your pet's details ."
             android:textColor="#2F6979"
             android:textSize="15sp"
             android:transitionName="loginText2" />
@@ -52,10 +51,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kufam_semibold"
-                android:text="Qualification"
+                android:text="Pet Name"
                 android:textColor="#2F6979"
                 android:textSize="15sp"
                 android:transitionName="loginText3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/petLoverEditProfileAddPetTextInputLayoutPetName"
+                style="@style/TextInputLayoutStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:boxBackgroundColor="@android:color/transparent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="textinp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="name"
+                    android:inputType="textCapWords"
+                    android:textColor="#2F6979"
+                    android:textColorHint="#2F6979"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/vetAppointmentsSetUpFormTextInputLayoutQualification"
@@ -66,57 +83,34 @@
                 app:boxStrokeWidth="2dp"
                 app:boxStrokeWidthFocused="4dp"
                 app:hintAnimationEnabled="false"
-                app:hintEnabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textCapWords"
-                    android:textColor="#2F6979"
-                    android:textColorHint="#2F6979"
-                    android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
-
-            </com.google.android.material.textfield.TextInputLayout>
+                app:hintEnabled="false" />
 
             <TextView
                 android:id="@+id/petLoverEditProfileAddPetTextViewType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kufam_semibold"
                 android:layout_marginTop="5dp"
-                android:text="Address of clinic or hospital"
+                android:fontFamily="@font/kufam_semibold"
+                android:text="Type"
                 android:textColor="#2F6979"
                 android:textSize="15sp"
                 android:transitionName="loginText3" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/vetAppointmentsSetUpFormTextInputLayoutAddress"
-                style="@style/TextInputLayoutStyle2"
+            <AutoCompleteTextView
+                android:id="@+id/petLoverEditProfileAddPetAutoCompleteTextViewType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:transitionName="loginField"
-                app:boxStrokeWidth="2dp"
-                app:boxStrokeWidthFocused="4dp"
-                app:hintAnimationEnabled="false"
-                app:hintEnabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textCapWords"
-                    android:textColor="#2F6979"
-                    android:textColorHint="#2F6979"
-                    android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
-
-            </com.google.android.material.textfield.TextInputLayout>
+                android:text="type"
+                android:textColor="#2F6979"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/petLoverEditProfileAddPetTextViewAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kufam_semibold"
                 android:layout_marginTop="5dp"
-                android:text="Area"
+                android:fontFamily="@font/kufam_semibold"
+                android:text="Age"
                 android:textColor="#2F6979"
                 android:textSize="15sp"
                 android:transitionName="loginText3" />
@@ -135,9 +129,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="E.g. 18"
                     android:inputType="textCapWords"
                     android:textColor="#2F6979"
-                    android:hint="E.g. Gulshan-e-Iqbal"
                     android:textColorHint="#2F6979"
                     android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
 
@@ -147,114 +141,120 @@
                 android:id="@+id/petLoverEditProfileAddPetTextViewBreed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kufam_semibold"
                 android:layout_marginTop="5dp"
-                android:text="Available time slot"
+                android:fontFamily="@font/kufam_semibold"
+                android:text="Breed"
                 android:textColor="#2F6979"
                 android:textSize="15sp"
                 android:transitionName="loginText3" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/petLoverEditProfileAddPetTextInputLayoutBreed"
-                style="@style/TextInputLayoutDropdownMenuStyle"
+                style="@style/TextInputLayoutStyle2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:transitionName="loginField"
-                app:boxStrokeWidth="2dp"
-                app:boxStrokeWidthFocused="4dp"
-                app:hintAnimationEnabled="false"
-                app:hintEnabled="false">
+                android:layout_height="match_parent">
 
-                <AutoCompleteTextView
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/petLoverEditProfileAddPetTextViewColur"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/vetAppointmentsSetUpFormAutoCompleteTextView" />
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="Colour"
+                    android:textColor="#2F6979"
+                    android:textSize="15sp" />
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/petLoverEditProfileAddPetTextInputLayoutColour"
+                    style="@style/TextInputLayoutStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
             </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/vetAppointmentsSetUpFormTextViewDays"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kufam_semibold"
-                android:layout_marginTop="5dp"
-                android:text="Days"
-                android:textColor="#2F6979"
-                android:textSize="15sp"
-                android:transitionName="loginText3"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="-10dp">
+            android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/vetAppointmentsSetUpFormCheckBoxMonday"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
                 android:fontFamily="@font/kufam_semibold"
+                android:paddingTop="10dp"
+                android:text="Gender:"
                 android:textColor="#2F6979"
-                android:textSize="15sp"
-                android:paddingTop="8dp"
-                android:text="Mon" />
+                android:textSize="15sp" />
 
-            <CheckBox
-                android:id="@+id/vetAppointmentsSetUpFormCheckBoxTuesday"
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kufam_semibold"
-                android:textColor="#2F6979"
-                android:textSize="15sp"
-                android:paddingTop="8dp"
-                android:text="Tue" />
+                android:id="@+id/signUpRadioGroup"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
 
-            <CheckBox
-                android:id="@+id/vetAppointmentsSetUpFormCheckBoxWednesday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kufam_semibold"
-                android:textColor="#2F6979"
-                android:textSize="15sp"
-                android:paddingTop="8dp"
-                android:text="Wed" />
+                <RadioButton
+                    android:id="@+id/petLoverEditProfileAddPetRadioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:buttonTint="#2F6979
+"
+                    android:fontFamily="@font/kufam_semibold"
+                    android:includeFontPadding="true"
+                    android:paddingTop="8dp"
+                    android:text="Male"
+                    android:textAlignment="textEnd"
+                    android:textColor="#2F6979"
+                    android:textSize="15sp" />
 
-            <CheckBox
-                android:id="@+id/vetAppointmentsSetUpFormCheckBoxThursday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kufam_semibold"
-                android:textColor="#2F6979"
-                android:textSize="15sp"
-                android:paddingTop="8dp"
-                android:text="Thu" />
+                <RadioButton
+                    android:id="@+id/petLoverEditProfileAddPetRadioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:buttonTint="#2F6979"
+                    android:fontFamily="@font/kufam_semibold"
+                    android:paddingTop="8dp"
+                    android:text="Female"
+                    android:textColor="#2F6979"
+                    android:textSize="15sp" />
 
-            <CheckBox
-                android:id="@+id/vetAppointmentsSetUpFormCheckBoxFriday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kufam_semibold"
-                android:textColor="#2F6979"
-                android:textSize="15sp"
-                android:paddingTop="8dp"
-                android:text="Fri" />
+
+
+            </RadioGroup>
 
         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:orientation="horizontal" />
 
         <Button
             android:id="@+id/petLoverEditProfileAddPetButtonSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#A39FE9"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#A39FE9"
             android:text="Submit"
             android:textColor="#CCE8DA"
             android:transitionName="loginButton" />
 
     </LinearLayout>
-
-
 
 </ScrollView>
