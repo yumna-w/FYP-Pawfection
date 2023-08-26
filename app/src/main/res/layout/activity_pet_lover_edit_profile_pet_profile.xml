@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".PetLoverEditProfilePetProfile"
+    >
+
+    <ImageView
+        android:id="@+id/petLoverEditProfilePetProfileImageViewPaw"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:baselineAlignBottom="false"
+        android:padding="10dp"
+        android:src="@drawable/paw"
+        android:transitionName="mainLogo" />
+
+    <TextView
+        android:id="@+id/petLoverEditProfilePetProfileTextViewPetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="Pet Name"
+        android:textColor="#2F6979"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/petLoverEditProfilePetProfileTextViewAnimalType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_medium"
+        android:text="Animal Type"
+        android:textColor="#2F6979"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/petLoverEditProfilePetProfileTextViewGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kufam_semibold"
+        android:text="Gender"
+        android:textColor="#2F6979"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/petLoverEditProfilePetProfileTextViewAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Age"
+            android:textColor="#2F6979"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/petLoverEditProfilePetProfileTextViewBreed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_semibold"
+            android:text="Breed"
+            android:textColor="#2F6979"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/petLoverEditProfilePetProfileTextViewColour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Colour."
+            android:textColor="#2F6979"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/petLoverEditProfilePetProfileButtonBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:layout_marginTop="10dp"
+            android:text="Back"
+            android:textColor="#CCE8DA" />
+
+    </LinearLayout>
+
+</LinearLayout>

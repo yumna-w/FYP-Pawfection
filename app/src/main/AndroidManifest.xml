@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Pawfection"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".PetLoverEditProfilePetProfile"
+            android:exported="false" />
+        <activity
             android:name=".PetLoverEditProfileAddPet"
             android:exported="false" />
         <activity
