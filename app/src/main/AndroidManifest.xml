@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Pawfection"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".VetAppointmentListItem"
+            android:exported="false" />
+        <activity
+            android:name=".VetAppointmentsViewAppointments"
+            android:exported="false" />
+        <activity
             android:name=".PetLoverEditProfilePetProfile"
             android:exported="false" />
         <activity
@@ -19,7 +25,7 @@
             android:exported="false" />
         <activity
             android:name=".PetLoverEditProfile"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".PetLoverPetSetUpReminder"
             android:exported="false" />
