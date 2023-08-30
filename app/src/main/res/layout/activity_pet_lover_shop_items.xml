@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/petLoverShopTextView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CCE8DA"
     android:padding="20dp"
-    tools:context=".VetAppointmentsViewAppointments">
+    tools:context=".PetLoverShopItems">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/petLoverShopImageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:padding="10dp"
@@ -22,43 +22,41 @@
             android:transitionName="mainLogo" />
 
         <TextView
-            android:id="@+id/VetAppointmentsViewAppointmentsTextView"
             android:layout_width="wrap_content"
             android:layout_height="112dp"
             android:fontFamily="@font/kufam_extrabold"
-            android:text="UPCOMMING APPOINTMENTS"
+            android:text="SHOP FOR NECESSITIES"
             android:textColor="#2F6979"
             android:textSize="35sp"
             android:transitionName="loginText" />
 
         <TextView
-            android:id="@+id/VetAppointmentsViewAppointmentsTextView2"
+            android:id="@+id/petLoverShopListTextView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/kufam_medium"
-            android:text="View Your Appointments."
+            android:text="It's Pawfect!."
             android:textColor="#2F6979"
             android:textSize="15sp"
             android:transitionName="loginText2" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/petLoverShopItemsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/VetAppointmentsViewAppointmentsRecyclerView"
             android:layout_margin="2dp" />
 
         <Button
-            android:id="@+id/petLoverVetAppointmentsListButtonViewAppointments"
+            android:id="@+id/petLoverShopButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#A39FE9"
             android:layout_marginTop="10dp"
-            android:text="View Appointments"
+            android:backgroundTint="#A39FE9"
+            android:text="View Order"
             android:textColor="#CCE8DA"
             android:transitionName="loginButton" />
 
     </LinearLayout>
-
 
 
 </ScrollView>

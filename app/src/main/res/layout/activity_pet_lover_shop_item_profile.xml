@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".PetLoverShopItemProfile">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/foodcat">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/petLoverShopItemProfileTextView"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:fontFamily="@font/kufam_extrabold"
+        android:text="Product Name "
+        android:textColor="#2F6979"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/petLoverShopItemProfileTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:fontFamily="@font/kufam_medium"
+        android:text="Price"
+        android:textColor="#2F6979"
+        android:textSize="24sp" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petLoverShopItemProfileTextInputLayoutPrice"
+        style="@style/TextInputLayoutStyle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:transitionName="loginField"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeWidthFocused="4dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textColor="#2F6979"
+            android:textColorHint="#2F6979"
+            android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/petLoverShopItemProfileTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:fontFamily="@font/kufam_medium"
+        android:text="Quantity"
+        android:textColor="#2F6979"
+        android:textSize="24sp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/petLoverShopItemProfileTextInputLayoutQuantity"
+        style="@style/TextInputLayoutStyle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:transitionName="loginField"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeWidthFocused="4dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textColor="#2F6979"
+            android:textColorHint="#2F6979"
+            android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/petLoverShopItemProfileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#A39FE9"
+        android:text="Submit"
+        android:textColor="#CCE8DA" />
+</LinearLayout>
+

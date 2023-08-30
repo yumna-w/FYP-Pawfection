@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class VetAppointmentListItem extends AppCompatActivity {
+public class PetLoverShopItems extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vet_appointment_list_item);
+        setContentView(R.layout.activity_pet_lover_shop_items);
     }
 }

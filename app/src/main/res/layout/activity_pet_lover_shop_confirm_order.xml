@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCE8DA"
+    tools:context=".PetLoverShopConfirmOrder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCE8DA"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/petLoverShopConfirmOrderImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:src="@drawable/paw"
+            android:transitionName="mainLogo" />
+
+        <TextView
+            android:id="@+id/petLoverShopConfirmOrderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="112dp"
+            android:fontFamily="@font/kufam_extrabold"
+            android:text="ORDER CONFORMATION "
+            android:textColor="#2F6979"
+            android:textSize="35sp"
+            android:transitionName="loginText" />
+
+        <TextView
+            android:id="@+id/petLoverShopConfirmOrderTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Payment method via Cash only ."
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/petLoverShopConfirmOrderTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:text="Address"
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:transitionName="loginText3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/petLoverShopConfirmOrderTextInputAddress"
+                style="@style/TextInputLayoutStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="loginField"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="#2F6979"
+                    android:textColorHint="#2F6979"
+                    android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/petLoverShopConfirmOrderTextView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kufam_semibold"
+                android:layout_marginTop="5dp"
+                android:text="Number "
+                android:textColor="#2F6979"
+                android:textSize="15sp"
+                android:transitionName="loginText3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/petLoverShopConfirmOrderTextInputNumber"
+                style="@style/TextInputLayoutStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="loginField"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#2F6979"
+                    android:textColorHint="#2F6979"
+                    android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/vetAppointmentsSetUpFormButtonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:layout_marginTop="10dp"
+            android:text="Place Order"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>
