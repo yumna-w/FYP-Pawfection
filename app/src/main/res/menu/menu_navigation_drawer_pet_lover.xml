@@ -24,16 +24,6 @@
             android:icon="@drawable/ic_adoption"/>
 
         <item
-            android:id="@+id/nav_pet_lover_social_feed"
-            android:title="Social Feed"
-            android:icon="@drawable/ic_social_feed"/>
-
-        <item
-            android:id="@+id/nav_pet_lover_identify_breed"
-            android:title="Identify Breed"
-            android:icon="@drawable/ic_identify_breed"/>
-
-        <item
             android:id="@+id/nav_pet_lover_edit_profile"
             android:title="Edit Profile"
             android:icon="@drawable/ic_edit_profile"/>

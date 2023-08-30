@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CCE8DA"
     tools:context=".PetLoverEditProfileAddPet">
 
     <LinearLayout
@@ -36,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/kufam_medium"
-            android:text="Enter your pet's details ."
+            android:text="Enter your pet's details."
             android:textColor="#2F6979"
             android:textSize="15sp"
             android:transitionName="loginText2" />
@@ -60,30 +61,21 @@
                 android:id="@+id/petLoverEditProfileAddPetTextInputLayoutPetName"
                 style="@style/TextInputLayoutStyle2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:boxBackgroundColor="@android:color/transparent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    style="textinp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="name"
-                    android:inputType="textCapWords"
-                    android:textColor="#2F6979"
-                    android:textColorHint="#2F6979"
-                    android:textSize="15sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/vetAppointmentsSetUpFormTextInputLayoutQualification"
-                style="@style/TextInputLayoutStyle2"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:transitionName="loginField"
                 app:boxStrokeWidth="2dp"
                 app:boxStrokeWidthFocused="4dp"
                 app:hintAnimationEnabled="false"
-                app:hintEnabled="false" />
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="#2F6979"
+                    android:textColorHint="#2F6979"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/petLoverEditProfileAddPetTextViewType"
@@ -96,13 +88,23 @@
                 android:textSize="15sp"
                 android:transitionName="loginText3" />
 
-            <AutoCompleteTextView
-                android:id="@+id/petLoverEditProfileAddPetAutoCompleteTextViewType"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/petLoverEditProfileAddPetTextInputLayoutType"
+                style="@style/TextInputLayoutDropdownMenuStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="type"
-                android:textColor="#2F6979"
-                android:textSize="15sp" />
+                android:transitionName="loginField"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/petLoverEditProfileAddPetAutoCompleteTextView" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/petLoverEditProfileAddPetTextViewAge"
@@ -110,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/kufam_semibold"
-                android:text="Age"
+                android:text="Age in years"
                 android:textColor="#2F6979"
                 android:textSize="15sp"
                 android:transitionName="loginText3" />
@@ -130,7 +132,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="E.g. 18"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:textColor="#2F6979"
                     android:textColorHint="#2F6979"
                     android:textSize="15sp"></com.google.android.material.textfield.TextInputEditText>
@@ -152,33 +154,51 @@
                 android:id="@+id/petLoverEditProfileAddPetTextInputLayoutBreed"
                 style="@style/TextInputLayoutStyle2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="#2F6979"
+                    android:textColorHint="#2F6979"
+                    android:textSize="15sp"/>
 
-                <TextView
-                    android:id="@+id/petLoverEditProfileAddPetTextViewColur"
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/petLoverEditProfileAddPetTextViewColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/kufam_semibold"
+                android:text="Colour"
+                android:textColor="#2F6979"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/petLoverEditProfileAddPetTextInputLayoutColour"
+                style="@style/TextInputLayoutStyle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="loginField"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="4dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="1"
-                    android:text="Colour"
+                    android:inputType="textCapWords"
                     android:textColor="#2F6979"
+                    android:textColorHint="#2F6979"
                     android:textSize="15sp" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/petLoverEditProfileAddPetTextInputLayoutColour"
-                    style="@style/TextInputLayoutStyle2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </com.google.android.material.textfield.TextInputLayout>
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -201,7 +221,7 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/signUpRadioGroup"
+                android:id="@+id/petLoverEditProfileAddPetRadioGroup"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp">
 
@@ -231,8 +251,6 @@
                     android:text="Female"
                     android:textColor="#2F6979"
                     android:textSize="15sp" />
-
-
 
             </RadioGroup>
 

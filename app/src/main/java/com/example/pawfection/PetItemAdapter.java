@@ -59,4 +59,9 @@ public class PetItemAdapter extends RecyclerView.Adapter<PetItemAdapter.ViewHold
         }
     }
 
+    public void clearData() {
+        for (int i = 0; i < petItems.length; i++) {
+            petItems[i] = null; // Set elements to null for a String array
+        }
+    }
 }

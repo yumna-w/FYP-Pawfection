@@ -114,6 +114,7 @@ public class Login extends AppCompatActivity {
                                     JSONObject jsonObject = new JSONObject(s);
                                     String accountType = jsonObject.getString("accountType");
                                     userID = jsonObject.getInt("id");
+                                    UserData.getInstance().setUsers_id(userID);
                                     String fullName = jsonObject.getString("fullName");
                                     for (int i = 0; i < fullName.length(); i++) {
                                         char c = fullName.charAt(i);

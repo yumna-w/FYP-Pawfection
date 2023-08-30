@@ -33,11 +33,12 @@ public class VetItemAdapter extends RecyclerView.Adapter<VetItemAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final VetItem vetItemList = vetItems[position];
         holder.vetName.setText(vetItemList.getVetName());
-        holder.vetArea.setText(vetItemList.getVetArea());
+        holder.vetArea.setText(vetItemList.getArea());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                VetsListData.getInstance().setVet_user_id_pointer(vetItemList.getUsers_id());
                 Intent intent = new Intent(context,PetLoverVetAppointmentsVetProfile.class);
                 context.startActivity(intent);
             }

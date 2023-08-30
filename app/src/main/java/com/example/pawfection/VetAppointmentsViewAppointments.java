@@ -4,11 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class VetAppointmentsViewAppointments extends AppCompatActivity {
+import com.example.pawfection.databinding.ActivityVetAppointmentsViewAppointmentsBinding;
+
+public class VetAppointmentsViewAppointments extends VetNavigationDrawerBase {
+
+    ActivityVetAppointmentsViewAppointmentsBinding activityVetAppointmentsViewAppointmentsBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vet_appointments_view_appointments);
+        activityVetAppointmentsViewAppointmentsBinding = ActivityVetAppointmentsViewAppointmentsBinding.inflate(getLayoutInflater());
+        setContentView(activityVetAppointmentsViewAppointmentsBinding.getRoot());
     }
 }

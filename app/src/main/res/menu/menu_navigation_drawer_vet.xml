@@ -12,16 +12,6 @@
             android:icon="@drawable/ic_appointments"/>
 
         <item
-            android:id="@+id/nav_vet_social_feed"
-            android:title="Social Feed"
-            android:icon="@drawable/ic_social_feed"/>
-
-        <item
-            android:id="@+id/nav_vet_edit_profile"
-            android:title="Edit Profile"
-            android:icon="@drawable/ic_edit_profile"/>
-
-        <item
             android:id="@+id/nav_vet_log_out"
             android:title="Log out"
             android:icon="@drawable/ic_log_out" />

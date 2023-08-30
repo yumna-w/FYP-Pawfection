@@ -1,45 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CCE8DA"
-    android:orientation="vertical"
     android:padding="20dp"
     tools:context=".PetLoverVetAppointmentsCity">
 
-    <ImageView
-        android:id="@+id/petLoverVetAppointmentsListImageViewPaw"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        android:src="@drawable/paw"
-        android:transitionName="mainLogo" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="112dp"
-        android:fontFamily="@font/kufam_extrabold"
-        android:text="BOOK VET APPOINTMENT"
-        android:textColor="#2F6979"
-        android:textSize="35sp"
-        android:transitionName="loginText" />
-
-    <TextView
-        android:id="@+id/petLoverVetAppointmentsListTextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/kufam_medium"
-        android:text="Choose your vet."
-        android:textColor="#2F6979"
-        android:textSize="15sp"
-        android:transitionName="loginText2" />
-
-    <androidx.recyclerview.widget.RecyclerView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/petLoverVetAppointmentsListRecyclerView"
-        android:layout_margin="2dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/petLoverVetAppointmentsListImageViewPaw"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:src="@drawable/paw"
+            android:transitionName="mainLogo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="112dp"
+            android:fontFamily="@font/kufam_extrabold"
+            android:text="BOOK VET APPOINTMENT"
+            android:textColor="#2F6979"
+            android:textSize="35sp"
+            android:transitionName="loginText" />
+
+        <TextView
+            android:id="@+id/petLoverVetAppointmentsListTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kufam_medium"
+            android:text="Choose your vet."
+            android:textColor="#2F6979"
+            android:textSize="15sp"
+            android:transitionName="loginText2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/petLoverVetAppointmentsListRecyclerView"
+            android:layout_margin="2dp" />
+
+        <Button
+            android:id="@+id/petLoverVetAppointmentsListButtonViewAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A39FE9"
+            android:layout_marginTop="10dp"
+            android:text="View Appointments"
+            android:textColor="#CCE8DA"
+            android:transitionName="loginButton" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>

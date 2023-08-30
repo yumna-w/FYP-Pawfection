@@ -4,10 +4,12 @@ public class PetItem {
 
     private String petName;
     private String petAnimaType;
+    private int pets_id;
 
-    public PetItem(String petName, String petAnimaType) {
+    public PetItem(String petName, String petAnimaType, int pets_id) {
         this.petName = petName;
         this.petAnimaType = petAnimaType;
+        this.pets_id = pets_id;
     }
 
     public String getPetName() {
@@ -24,5 +26,13 @@ public class PetItem {
 
     public void setPetAnimaType(String petAnimaType) {
         this.petAnimaType = petAnimaType;
+    }
+
+    public int getPetsID() {
+        return pets_id;
+    }
+
+    public void setPetsID(int pets_id) {
+        this.pets_id = pets_id;
     }
 }
