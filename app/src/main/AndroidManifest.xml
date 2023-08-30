@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Pawfection"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".PetLoverViewAppointments"
+            android:exported="false" />
+        <activity
             android:name=".PetLoverShopViewOrders"
             android:exported="false" />
         <activity
